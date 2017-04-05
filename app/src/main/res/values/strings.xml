@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Atividade</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_1">Jardim Botanico</string>
+    <string name="description_1"> É um dos principais pontos turísticos da cidade de Curitiba, capital do estado brasileiro do Paraná. Localiza-se no bairro Jardim Botânico.</string>
+
+    <string name="title_2">Parque Tanguá</string>
+    <string name="description_2">Foi inaugurado em 23 de novembro de 1996 pelo então prefeito Rafael Greca de Macedo, e construído onde existiam duas pedreiras desativadas.</string>
+
+    <string name="title_3">Ópera de Arame</string>
+    <string name="description_3">O Ópera de Arame é um teatro brasileiro, cujo nome deriva do estilo construtivo. É feito de tubos de aço e estruturas metálicas.</string>
+
+    <string name="title_4">Catedral de Curitiba</string>
+    <string name="description_4">A Catedral Basílica Menor Nossa Senhora da Luz ou Catedral Metropolitana de Curitiba[1], é um templo católico do município de Curitiba</string>
+
+    <string name="title_5">Parque Tingui</string>
+    <string name="description_5">O Parque Tingüi é um dos principais parques de Curitiba, capital do estado brasileiro do Paraná. </string>
+
+    <string name="title_6">Palacio Avenida</string>
+    <string name="description_6">O Palácio Avenida é um dos mais importantes edifícios históricos de Curitiba, capital do estado brasileiro do Paraná. </string>
+
+    <string name="title_7">Museu do olho</string>
+    <string name="description_7">O Museu Oscar Niemeyer localiza-se na cidade de Curitiba, capital do estado do Paraná, Brasil.</string>
+
+    <string name="title_8">Rua 24Horas</string>
+    <string name="description_8">A Rua 24 Horas é sem dúvida um ponto turístico marcante de Curitiba. Sua visita é recomendada tanto para turistas quanto para os curitibanos</string>
+
+    <string name="title_9">Rua das Flores</string>
+    <string name="description_9">Rua das Flores é o nome pelo qual ficou conhecido o trecho inicial da Rua XV de Novembro, juntamente com a avenida Luiz Xavier, no centro de Curitiba.</string>
+
+    <string name="title_10">Largo da Ordem</string>
+    <string name="description_10">O Centro Histórico de Curitiba, também chamado de Setor Histórico de Curitiba, é um conjunto de edificações de importância histórica e cultural.</string>
+
+</resources>
