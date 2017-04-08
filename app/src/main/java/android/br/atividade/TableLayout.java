@@ -3,7 +3,7 @@ package android.br.atividade;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class TableLayoutActivity extends AppCompatActivity {
+public class TableLayout extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
