@@ -8,80 +8,246 @@
 
     <GridLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="@dimen/fab_margin"
-        android:layout_marginBottom="@dimen/fab_margin"
-        android:layout_height="wrap_content"
         android:columnCount="1">
 
         <GridLayout
-            android:layout_marginBottom="@dimen/fab_littleMargin"
-            android:paddingLeft="@dimen/fab_margin"
-            android:paddingRight="@dimen/fab_margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="2">
+            android:layout_marginBottom="@dimen/fab_littleMargin"
+            android:columnCount="2"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin">
+
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_1" />
-            <GridLayout android:layout_gravity="left"
-                android:layout_width="260dp"
+
+            <GridLayout
+                android:layout_width="@dimen/box"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/fab_littleMargin"
                 android:columnCount="1">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimary"
                     android:text="@string/title_1"
                     android:textSize="@dimen/fontParagraph" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_marginTop="@dimen/fab_littleMargin"
                     android:gravity="start"
-                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
                     android:text="@string/description_1"
+                    android:textAlignment="textStart"
                     android:textSize="@dimen/fontText" />
             </GridLayout>
+
+
+        </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fab_littleMargin"
+            android:columnCount="2"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin">
+
+            <ImageView
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_2" />
+
+            <GridLayout
+                android:layout_width="@dimen/box"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/fab_littleMargin"
+                android:columnCount="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/title_2"
+                    android:textSize="@dimen/fontParagraph" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/fab_littleMargin"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    android:text="@string/description_2"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/fontText" />
+            </GridLayout>
+
+
+        </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fab_littleMargin"
+            android:columnCount="2"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin">
+
+            <ImageView
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_3" />
+
+            <GridLayout
+                android:layout_width="@dimen/box"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/fab_littleMargin"
+                android:columnCount="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/title_3"
+                    android:textSize="@dimen/fontParagraph" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/fab_littleMargin"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    android:text="@string/description_3"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/fontText" />
+            </GridLayout>
+
+
+        </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fab_littleMargin"
+            android:columnCount="2"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin">
+
+            <ImageView
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_4" />
+
+            <GridLayout
+                android:layout_width="@dimen/box"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/fab_littleMargin"
+                android:columnCount="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/title_4"
+                    android:textSize="@dimen/fontParagraph" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/fab_littleMargin"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    android:text="@string/description_4"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/fontText" />
+            </GridLayout>
+
+
+        </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fab_littleMargin"
+            android:columnCount="2"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin">
+
+            <ImageView
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_5" />
+
+            <GridLayout
+                android:layout_width="@dimen/box"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/fab_littleMargin"
+                android:columnCount="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/title_5"
+                    android:textSize="@dimen/fontParagraph" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/fab_littleMargin"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    android:text="@string/description_5"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/fontText" />
+            </GridLayout>
+
+
+        </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fab_littleMargin"
+            android:columnCount="2"
+            android:paddingLeft="@dimen/fab_margin"
+            android:paddingRight="@dimen/fab_margin">
+
+            <ImageView
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_6" />
+
+            <GridLayout
+                android:layout_width="@dimen/box"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/fab_littleMargin"
+                android:columnCount="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/title_6"
+                    android:textSize="@dimen/fontParagraph" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/fab_littleMargin"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    android:text="@string/description_6"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/fontText" />
+            </GridLayout>
+
+
         </GridLayout>
 
-        <GridLayout
-            android:layout_marginBottom="@dimen/fab_littleMargin"
-            android:paddingLeft="@dimen/fab_margin"
-            android:paddingRight="@dimen/fab_margin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="2">
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_1" />
-            <GridLayout android:layout_gravity="left"
-                android:layout_width="260dp"
-                android:columnCount="1">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorPrimary"
-                    android:text="@string/title_1"
-                    android:textSize="@dimen/fontParagraph" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="@dimen/fab_littleMargin"
-                    android:gravity="start"
-                    android:textAlignment="textStart"
-                    android:text="@string/description_1"
-                    android:textSize="@dimen/fontText" />
-            </GridLayout>
-        </GridLayout>
 
     </GridLayout>
-
-
-
-
-
-
-
 
 </ScrollView>
