@@ -12,7 +12,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/image"
-            android:text="Meu Layout: Linear"
+            android:text="@string/meu_layout_linear"
             android:id="@+id/linear"/>
 
         <Button
@@ -24,13 +24,13 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/image"
-            android:text="Table + LineaR"
+            android:text="@string/table_linear"
             android:id="@+id/tableLinear"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/image"
-            android:text="Relative + Linear"
+            android:text="@string/relative_linear"
             android:id="@+id/frameLinear"/>
 
 </LinearLayout>
