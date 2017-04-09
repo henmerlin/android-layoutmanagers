@@ -9,10 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/appBarLayout"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/fab_margin"
         android:layout_marginTop="@dimen/fab_margin"
         android:orientation="vertical">
@@ -21,7 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/appBarLayout"
+
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
@@ -29,6 +26,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:contentDescription="Img"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_1" />
 
@@ -60,7 +58,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/appBarLayout"
+
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
@@ -98,7 +96,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/appBarLayout"
+
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
@@ -136,7 +134,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/appBarLayout"
+
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
@@ -174,7 +172,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/appBarLayout"
+
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
@@ -212,7 +210,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/appBarLayout"
+
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
@@ -250,7 +248,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/appBarLayout"
+
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
@@ -288,7 +286,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/appBarLayout"
+
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
@@ -326,7 +324,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/appBarLayout"
+
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
@@ -364,7 +362,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/appBarLayout"
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">

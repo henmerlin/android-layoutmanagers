@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button linear, grid, tableLinear, frameLinear;
+    private Button linear, grid, tableLinear, relative;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         linear = (Button) findViewById(R.id.linear);
         grid = (Button) findViewById(R.id.grid);
         tableLinear = (Button) findViewById(R.id.tableLinear);
-        frameLinear = (Button) findViewById(R.id.frameLinear);
+        relative = (Button) findViewById(R.id.frameLinear);
 
         linear.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        frameLinear.setOnClickListener(new View.OnClickListener() {
+        relative.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                doIntent(FrameLayoutActivity.class);
+                doIntent(RelativeLayoutActivity.class);
             }
         });
 

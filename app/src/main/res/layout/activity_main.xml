@@ -30,7 +30,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/image"
-            android:text="Linear + Frame"
+            android:text="Relative + Linear"
             android:id="@+id/frameLinear"/>
 
 </LinearLayout>
