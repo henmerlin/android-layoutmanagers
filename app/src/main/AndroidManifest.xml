@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GridLayout"></activity>
+        <activity android:name=".GridLayoutActivity" />
+        <activity android:name=".TableLinearActivity" />
+        <activity android:name=".FrameLayoutActivity"></activity>
     </application>
 
 </manifest>

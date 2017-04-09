@@ -4,31 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
-    android:orientation="vertical"
-    tools:context="android.br.atividade.LinearLayoutActivity">
+    tools:context="android.br.atividade.TableLinearActivity">
 
-    <LinearLayout
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/appBarLayout"
         android:layout_marginBottom="@dimen/fab_margin"
-        android:layout_marginTop="@dimen/fab_margin"
-        android:orientation="vertical">
+        android:layout_marginTop="@dimen/fab_margin">
 
-        <!-- INICO DAS LINHAS COM CONTEUDO -->
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/appBarLayout"
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_1" />
 
@@ -46,28 +40,27 @@
                     android:textSize="@dimen/fontParagraph" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/box"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/fab_littleMargin"
                     android:gravity="start"
                     android:text="@string/description_1"
                     android:textAlignment="textStart"
                     android:textSize="@dimen/fontText" />
             </LinearLayout>
+        </TableRow>
 
-        </LinearLayout>
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/appBarLayout"
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_2" />
 
@@ -85,27 +78,27 @@
                     android:textSize="@dimen/fontParagraph" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/box"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/fab_littleMargin"
                     android:gravity="start"
                     android:text="@string/description_2"
+                    android:textAlignment="textStart"
                     android:textSize="@dimen/fontText" />
             </LinearLayout>
+        </TableRow>
 
-        </LinearLayout>
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/appBarLayout"
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_3" />
 
@@ -123,27 +116,27 @@
                     android:textSize="@dimen/fontParagraph" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/box"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/fab_littleMargin"
                     android:gravity="start"
                     android:text="@string/description_3"
+                    android:textAlignment="textStart"
                     android:textSize="@dimen/fontText" />
             </LinearLayout>
+        </TableRow>
 
-        </LinearLayout>
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/appBarLayout"
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_4" />
 
@@ -161,27 +154,27 @@
                     android:textSize="@dimen/fontParagraph" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/box"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/fab_littleMargin"
                     android:gravity="start"
                     android:text="@string/description_4"
+                    android:textAlignment="textStart"
                     android:textSize="@dimen/fontText" />
             </LinearLayout>
+        </TableRow>
 
-        </LinearLayout>
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/appBarLayout"
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_5" />
 
@@ -199,27 +192,27 @@
                     android:textSize="@dimen/fontParagraph" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/box"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/fab_littleMargin"
                     android:gravity="start"
                     android:text="@string/description_5"
+                    android:textAlignment="textStart"
                     android:textSize="@dimen/fontText" />
             </LinearLayout>
+        </TableRow>
 
-        </LinearLayout>
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/appBarLayout"
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_6" />
 
@@ -237,27 +230,27 @@
                     android:textSize="@dimen/fontParagraph" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/box"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/fab_littleMargin"
                     android:gravity="start"
                     android:text="@string/description_6"
+                    android:textAlignment="textStart"
                     android:textSize="@dimen/fontText" />
             </LinearLayout>
+        </TableRow>
 
-        </LinearLayout>
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/appBarLayout"
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_7" />
 
@@ -275,27 +268,27 @@
                     android:textSize="@dimen/fontParagraph" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/box"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/fab_littleMargin"
                     android:gravity="start"
                     android:text="@string/description_7"
+                    android:textAlignment="textStart"
                     android:textSize="@dimen/fontText" />
             </LinearLayout>
+        </TableRow>
 
-        </LinearLayout>
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/appBarLayout"
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_8" />
 
@@ -313,27 +306,27 @@
                     android:textSize="@dimen/fontParagraph" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/box"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/fab_littleMargin"
                     android:gravity="start"
                     android:text="@string/description_8"
+                    android:textAlignment="textStart"
                     android:textSize="@dimen/fontText" />
             </LinearLayout>
+        </TableRow>
 
-        </LinearLayout>
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/appBarLayout"
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_9" />
 
@@ -351,27 +344,27 @@
                     android:textSize="@dimen/fontParagraph" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/box"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/fab_littleMargin"
                     android:gravity="start"
                     android:text="@string/description_9"
+                    android:textAlignment="textStart"
                     android:textSize="@dimen/fontText" />
             </LinearLayout>
+        </TableRow>
 
-        </LinearLayout>
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/appBarLayout"
             android:layout_marginBottom="@dimen/fab_littleMargin"
             android:paddingLeft="@dimen/fab_margin"
             android:paddingRight="@dimen/fab_margin">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_10" />
 
@@ -389,15 +382,17 @@
                     android:textSize="@dimen/fontParagraph" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/box"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/fab_littleMargin"
                     android:gravity="start"
                     android:text="@string/description_10"
+                    android:textAlignment="textStart"
                     android:textSize="@dimen/fontText" />
             </LinearLayout>
+        </TableRow>
 
-        </LinearLayout>
+    </TableLayout>
 
-    </LinearLayout>
+
 </ScrollView>

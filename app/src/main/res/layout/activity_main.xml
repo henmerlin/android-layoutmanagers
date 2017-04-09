@@ -1,27 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
-    tools:context="android.br.atividade.MainActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/image"
-            android:text="Meu Layout: LinearLayout"/>
+    tools:context="android.br.atividade.MainActivity"
+    android:orientation="vertical"
+    >
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/image"
-            android:text="GridLayout"/>
+            android:text="Meu Layout: Linear"
+            android:id="@+id/linear"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image"
+            android:text="@string/gridlayout"
+            android:id="@+id/grid"/>
 
-    </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image"
+            android:text="Table + LineaR"
+            android:id="@+id/tableLinear"/>
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image"
+            android:text="Linear + Frame"
+            android:id="@+id/frameLinear"/>
+
+</LinearLayout>

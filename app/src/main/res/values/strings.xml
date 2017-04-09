@@ -32,4 +32,6 @@
     <string name="title_10">Largo da Ordem</string>
     <string name="description_10">O Centro Histórico de Curitiba, também chamado de Setor Histórico de Curitiba, é um conjunto de edificações de importância histórica e cultural.</string>
 
+    <string name="gridlayout">GridLayout</string>
+
 </resources>
