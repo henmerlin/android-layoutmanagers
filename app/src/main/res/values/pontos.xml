@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nomes_pontos">
+        <item>Jardim Botanico</item>
+        <item>Parque Tanguá</item>
+        <item>Ópera de Arame</item>
+        <item>Catedral de Curitiba</item>
+        <item>Parque Tingui</item>
+        <item>Palacio Avenida</item>
+        <item>Museu do olho</item>
+        <item>Rua 24Horas</item>
+        <item>Rua das Flores</item>
+        <item>Largo da Ordem</item>
+    </string-array>
+    <string-array name="descs_pontos">
+        <item>É um dos principais pontos turísticos da cidade de Curitiba, capital do estado brasileiro do Paraná. Localiza-se no bairro Jardim Botânico.</item>
+        <item>Foi inaugurado em 23 de novembro de 1996 pelo então prefeito Rafael Greca de Macedo, e construído onde existiam duas pedreiras desativadas.</item>
+        <item>O Ópera de Arame é um teatro brasileiro, cujo nome deriva do estilo construtivo. É feito de tubos de aço e estruturas metálicas.</item>
+        <item>A Catedral Basílica Menor Nossa Senhora da Luz ou Catedral Metropolitana de Curitiba[1], é um templo católico do município de Curitiba</item>
+        <item>O Parque Tingüi é um dos principais parques de Curitiba, capital do estado brasileiro do Paraná. </item>
+        <item>O Palácio Avenida é um dos mais importantes edifícios históricos de Curitiba, capital do estado brasileiro do Paraná.</item>
+        <item>O Museu Oscar Niemeyer localiza-se na cidade de Curitiba, capital do estado do Paraná, Brasil.</item>
+        <item>A Rua 24 Horas é sem dúvida um ponto turístico marcante de Curitiba. Sua visita é recomendada tanto para turistas quanto para os curitibanos.</item>
+        <item>Rua das Flores é o nome pelo qual ficou conhecido o trecho inicial da Rua XV de Novembro, juntamente com a avenida Luiz Xavier, no centro de Curitiba.</item>
+        <item>O Centro Histórico de Curitiba, também chamado de Setor Histórico de Curitiba, é um conjunto de edificações de importância histórica e cultural.</item>
+    </string-array>
+    <array name="imagens_pontos">
+        <item>@drawable/img_1</item>
+        <item>@drawable/img_2</item>
+        <item>@drawable/img_3</item>
+        <item>@drawable/img_4</item>
+        <item>@drawable/img_5</item>
+        <item>@drawable/img_6</item>
+        <item>@drawable/img_7</item>
+        <item>@drawable/img_8</item>
+        <item>@drawable/img_9</item>
+    </array>
+</resources>
