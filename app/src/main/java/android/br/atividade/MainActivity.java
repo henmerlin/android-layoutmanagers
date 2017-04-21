@@ -27,26 +27,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        grid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                doIntent(GridLayoutActivity.class);
-            }
-        });
-
-        tableLinear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                doIntent(TableLinearActivity.class);
-            }
-        });
-
-        relative.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                doIntent(RelativeLayoutActivity.class);
-            }
-        });
 
     }
 
