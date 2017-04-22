@@ -1,38 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/colorPrimaryDark"
+        app:titleTextColor="@color/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+
+    <ListView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/ListView01"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:orientation="vertical"
-        tools:context="android.br.atividade.MainActivity">
+        tools:context="android.br.atividade.MainActivity"
+        tools:listitem="@layout/list_row"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/fab_littleMargin"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/fab_margin"
-            android:layout_marginTop="@dimen/fab_margin"
-            android:orientation="vertical">
-
-            <ListView
-                android:id="@+id/ListView01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-
-        </LinearLayout>
-    </ScrollView>
 
 </LinearLayout>

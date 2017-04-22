@@ -1,5 +1,6 @@
 package android.br.atividade;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,9 +16,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
     String modo_envio, nome;
     Integer nrAcompanhantes;
     Boolean incluiAlmoco;
-
-    private ArrayAdapter<String> myList;
 
 
     @Override
@@ -82,16 +82,19 @@ public class MainActivity extends AppCompatActivity {
             //retorna as Views que devem ser preenchidas quando a Janela exibir
             //determinada posição ou linha da Lista
             public View getView(int position, View convertView, ViewGroup parent) {
-                //recuperamos o serviço de Inflate do Android porque precisamos dele para carregar nosso Layout
-                // dinamicamente
                 LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
 
-                //de posse do inflate podemos inflar a Vew do List_row que corresponde há uma linha da tabela
-                View view = inflater.inflate(R.layout.list_row, null);
+                @SuppressLint("ViewHolder") View view = inflater.inflate(R.layout.list_row, null);
 
-                //recuperamos o TV e setamos o valor correto
-                // TextView textView = (TextView) view.findViewById(R.id.tv_01_view);
-                //textView.setText(nomePaises[position]);
+                ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
+                imageView.setImageDrawable(imagensPontos.getDrawable(position));
+
+                TextView header = (TextView) view.findViewById(R.id.textViewHeader);
+                header.setText(nomesPontos[position]);
+
+                TextView desc = (TextView) view.findViewById(R.id.textViewDesc);
+                desc.setText(descsPontos[position]);
+
 
                 //recumeramos a iv e setamos a imagem correta
                 //ImageView iv = (ImageView) view.findViewById(R.id.img_01_view);
