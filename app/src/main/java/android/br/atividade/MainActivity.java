@@ -12,6 +12,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -33,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     Integer nrAcompanhantes;
     Boolean incluiAlmoco;
 
+    private ArrayAdapter<String> myList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +60,46 @@ public class MainActivity extends AppCompatActivity {
         nomesPontos = res.getStringArray(R.array.nomes_pontos);
         descsPontos = res.getStringArray(R.array.descs_pontos);
         imagensPontos = res.obtainTypedArray(R.array.imagens_pontos);
+
+        listView.setAdapter(new BaseAdapter() {
+            //retorna o número de ítens total da lista
+            public int getCount() {
+                return nomesPontos.length;
+            }
+
+            //retorna um item em específico, o nome de um país em dada posição da lista
+            public Object getItem(int position) {
+                return nomesPontos[position];
+            }
+
+            //retorna o Id de um ítem em dada posição
+            //por opção de implementação o id é o mesmo que a posição
+            //mas o Android e RecyclerView não sabem disso e nem devem presumí-lo
+            public long getItemId(int position) {
+                return position;
+            }
+
+            //retorna as Views que devem ser preenchidas quando a Janela exibir
+            //determinada posição ou linha da Lista
+            public View getView(int position, View convertView, ViewGroup parent) {
+                //recuperamos o serviço de Inflate do Android porque precisamos dele para carregar nosso Layout
+                // dinamicamente
+                LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+
+                //de posse do inflate podemos inflar a Vew do List_row que corresponde há uma linha da tabela
+                View view = inflater.inflate(R.layout.list_row, null);
+
+                //recuperamos o TV e setamos o valor correto
+                // TextView textView = (TextView) view.findViewById(R.id.tv_01_view);
+                //textView.setText(nomePaises[position]);
+
+                //recumeramos a iv e setamos a imagem correta
+                //ImageView iv = (ImageView) view.findViewById(R.id.img_01_view);
+                // iv.setImageDrawable(bandeiras.getDrawable(position));
+                return view;
+            }
+        });
+
 
     }
 
