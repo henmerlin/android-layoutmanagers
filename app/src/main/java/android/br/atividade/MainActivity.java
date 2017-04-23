@@ -1,13 +1,14 @@
 package android.br.atividade;
 
 import android.annotation.SuppressLint;
+import android.br.atividade.dal.PontoTuristicoDAO;
+import android.br.atividade.model.TurismoSingleton;
+import android.br.atividade.model.entity.PontoTuristico;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,17 +17,19 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.List;
 
-    String[] nomesPontos;
-    String[] descsPontos;
-    TypedArray imagensPontos;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
     SharedPreferences sharedPreferences;
     SharedPreferences.OnSharedPreferenceChangeListener spChanged = new
             SharedPreferences.OnSharedPreferenceChangeListener() {
@@ -36,10 +39,19 @@ public class MainActivity extends AppCompatActivity {
                     setUsersPreferences();
                 }
             };
+
+
     String modo_envio, nome;
     Integer nrAcompanhantes;
     Boolean incluiAlmoco;
 
+    /**
+     * Componentes
+     */
+    Button comprar;
+    ListView listView;
+
+    TurismoSingleton s = TurismoSingleton.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,28 +60,66 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
-
-        //Recupera a View da lista a ser utilizada
-        ListView listView = (ListView) findViewById(R.id.ListView01);
-
         //Recupera o contexto desta app
         Context ctx = getApplicationContext();
         //Recupera ref para resources
-        Resources res = ctx.getResources();
+        PontoTuristicoDAO dao = new PontoTuristicoDAO(ctx);
+        s.setPontos(dao.listar());
 
-        nomesPontos = res.getStringArray(R.array.nomes_pontos);
-        descsPontos = res.getStringArray(R.array.descs_pontos);
-        imagensPontos = res.obtainTypedArray(R.array.imagens_pontos);
+        //Recupera a View da lista a ser utilizada
+        listView = (ListView) findViewById(R.id.ListView01);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                CheckBox checkbox = (CheckBox) view.findViewById(R.id.checkbox);
+                s.getPontos().get(position).setSelected(!checkbox.isChecked());
+                checkbox.setChecked(!checkbox.isChecked());
+                Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+            }
+        });
 
+        this.carregarCampos();
+
+
+        // Listener do Botão Compra
+        comprar = (Button) findViewById(R.id.comprar);
+        comprar.setOnClickListener(this);
+
+
+    }
+
+    /**
+     * Listener do Botão Compra
+     *
+     * @param v
+     */
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        this.carregarCampos();
+    }
+
+    protected void carregarCampos(){
+        listView.setAdapter(null);
         listView.setAdapter(new BaseAdapter() {
             //retorna o número de ítens total da lista
             public int getCount() {
-                return nomesPontos.length;
+                return s.getPontos().size();
             }
 
             //retorna um item em específico, o nome de um país em dada posição da lista
-            public Object getItem(int position) {
-                return nomesPontos[position];
+            public PontoTuristico getItem(int position) {
+                return s.getPontos().get(position);
             }
 
             //retorna o Id de um ítem em dada posição
@@ -86,25 +136,25 @@ public class MainActivity extends AppCompatActivity {
 
                 @SuppressLint("ViewHolder") View view = inflater.inflate(R.layout.list_row, null);
 
+                PontoTuristico p = s.getPontos().get(position);
+
                 ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
-                imageView.setImageDrawable(imagensPontos.getDrawable(position));
+                imageView.setImageDrawable(p.getImagem());
 
                 TextView header = (TextView) view.findViewById(R.id.textViewHeader);
-                header.setText(nomesPontos[position]);
+                header.setText(p.getNome());
 
                 TextView desc = (TextView) view.findViewById(R.id.textViewDesc);
-                desc.setText(descsPontos[position]);
+                desc.setText(p.getDescricao());
 
+                CheckBox checkbox = (CheckBox) view.findViewById(R.id.checkbox);
+                checkbox.setChecked(p.getSelected());
 
-                //recumeramos a iv e setamos a imagem correta
-                //ImageView iv = (ImageView) view.findViewById(R.id.img_01_view);
-                // iv.setImageDrawable(bandeiras.getDrawable(position));
                 return view;
             }
         });
-
-
     }
+
 
     public void setUsersPreferences() {
         modo_envio = sharedPreferences.getString("modo_envio", "SMS");
@@ -157,4 +207,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+
 }

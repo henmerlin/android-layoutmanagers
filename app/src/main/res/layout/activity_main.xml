@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,21 +10,60 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimaryDark"
-        app:titleTextColor="@color/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:text="Total Agora:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontParagraph" />
+
+            <TextView
+                android:id="@+id/totalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_toLeftOf="@+id/comprar"
+                android:layout_toStartOf="@+id/comprar"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontParagraph" />
+
+            <Button
+                android:id="@+id/comprar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Comprar Agora" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
 
 
     <ListView xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/ListView01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        tools:context="android.br.atividade.MainActivity"
-        tools:listitem="@layout/list_row"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
         android:divider="@android:color/transparent"
-        android:dividerHeight="@dimen/fab_littleMargin"/>
+        android:dividerHeight="@dimen/fab_littleMargin"
+        tools:listitem="@layout/list_row" />
 
 
 </LinearLayout>
