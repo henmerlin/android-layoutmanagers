@@ -2,6 +2,7 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="fab_littleMargin">4dp</dimen>
     <dimen name="fontParagraph">18sp</dimen>
+    <dimen name="font">15sp</dimen>
     <dimen name="fontText">12sp</dimen>
     <dimen name="box">249dp</dimen>
     <dimen name="image">100dp</dimen>

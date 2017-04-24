@@ -11,6 +11,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -21,12 +22,11 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -50,8 +50,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     Button comprar;
     ListView listView;
+    TextView total;
+    ImageButton prefs;
 
     TurismoSingleton s = TurismoSingleton.getInstance();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,11 +64,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+
+        prefs = (ImageButton) findViewById(R.id.prefs);
+        prefs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(MainActivity.this, PrefActivity.class);
+                //startActivity(it);
+                startActivityForResult(it, 1);
+            }
+        });
+
+
         //Recupera o contexto desta app
         Context ctx = getApplicationContext();
         //Recupera ref para resources
         PontoTuristicoDAO dao = new PontoTuristicoDAO(ctx);
         s.setPontos(dao.listar());
+
+        total = (TextView) findViewById(R.id.totalTextView);
+        total.setText("R$" + new Integer(0));
 
         //Recupera a View da lista a ser utilizada
         listView = (ListView) findViewById(R.id.ListView01);
@@ -72,9 +93,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 CheckBox checkbox = (CheckBox) view.findViewById(R.id.checkbox);
+
                 s.getPontos().get(position).setSelected(!checkbox.isChecked());
                 checkbox.setChecked(!checkbox.isChecked());
-                Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+                total.setText("R$" + s.getTotal().toString());
             }
         });
 
@@ -99,6 +121,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        this.carregarCampos();
+    }
+
+    @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
     }
@@ -109,8 +137,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.carregarCampos();
     }
 
-    protected void carregarCampos(){
-        listView.setAdapter(null);
+    protected void carregarCampos() {
+        this.setUsersPreferences();
+        total.setText("R$" + s.getTotal().toString());
         listView.setAdapter(new BaseAdapter() {
             //retorna o número de ítens total da lista
             public int getCount() {
@@ -157,10 +186,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     public void setUsersPreferences() {
-        modo_envio = sharedPreferences.getString("modo_envio", "SMS");
-        nome = sharedPreferences.getString("nome", "Nome Completo");
-        nrAcompanhantes = sharedPreferences.getInt("nrAcompanhantes", 1);
-        incluiAlmoco = sharedPreferences.getBoolean("incluiAlmoco", false);
+        s.setAlmoco(sharedPreferences.getBoolean("incluiAlmoco", false));
+        s.setModoEnvio(sharedPreferences.getString("modo_envio", "SMS"));
+        s.setNome(sharedPreferences.getString("nome", "Nome Completo"));
+        try {
+            s.setNrPessoas(Integer.parseInt(sharedPreferences.getString("nrAcompanhantes", "0")));
+        }catch (Exception e){
+            s.setNrPessoas(0);
+        }
+
     }
 
     public void sendWhatsApp() {
@@ -208,5 +242,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    protected void doIntent(Class c) {
+        Intent i = new Intent(this, c);
+        startActivity(i);
+    }
 
 }

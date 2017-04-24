@@ -15,6 +15,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:titleTextColor="@color/colorPrimary">
 
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -26,29 +27,42 @@
                 android:layout_marginTop="@dimen/fab_margin"
                 android:text="Total Agora:"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/fontParagraph" />
+                android:textSize="@dimen/font" />
 
             <TextView
                 android:id="@+id/totalTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_alignBaseline="@+id/textView"
+                android:layout_alignBottom="@+id/textView"
+                android:layout_toLeftOf="@+id/prefs"
+                android:layout_toStartOf="@+id/prefs"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font" />
+
+            <ImageButton
+                android:id="@+id/prefs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/comprar"
+                android:layout_alignTop="@+id/comprar"
                 android:layout_toLeftOf="@+id/comprar"
                 android:layout_toStartOf="@+id/comprar"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/fontParagraph" />
+                android:src="@drawable/ic_settings_white_24dp" />
+            ... />
 
             <Button
                 android:id="@+id/comprar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView"
+                android:layout_alignBottom="@+id/textView"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:text="Comprar Agora" />
+                android:text="Comprar Agora"
+                android:textSize="@dimen/fontText" />
+
+
         </RelativeLayout>
 
 

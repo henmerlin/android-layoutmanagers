@@ -2,20 +2,23 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Adiciona uma categoria de escolhas pessoais-->
-    <PreferenceCategory
-        android:title="Preferencias">
+    <PreferenceCategory android:title="Preferencias">
         <ListPreference
-            android:key="modo_envio"
-            android:title="Meio Preferencial"
             android:entries="@array/send_methods"
-            android:entryValues="@array/send_methods"/>
+            android:entryValues="@array/send_methods"
+            android:key="modo_envio"
+            android:title="Meio Preferencial" />
         <EditTextPreference
             android:key="nome"
             android:title="Nome Completo" />
         <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="number"
             android:key="nrAcompanhantes"
             android:title="Nº de Acompanhantes" />
+
         <CheckBoxPreference
+            android:defaultValue="false"
             android:key="incluiAlmoco"
             android:title="Incluir almoço?" />
 
