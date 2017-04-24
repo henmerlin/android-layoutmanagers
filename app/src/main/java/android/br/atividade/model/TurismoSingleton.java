@@ -103,7 +103,7 @@ public class TurismoSingleton {
         fraseologia = "";
         fraseologia = "Olá, meu nome é " + nome + " e desejo conhecer o ";
         fraseologia += Util.listToPortuguese(toList(escolhas)).toString();
-        fraseologia += "Tenho " + nrPessoas + " acompanhante(s). ";
+        fraseologia += " Tenho " + nrPessoas + " acompanhante(s). ";
         if (almoco) {
             fraseologia += "O passeio deve incluir almoço.";
         } else {
