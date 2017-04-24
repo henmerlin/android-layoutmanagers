@@ -1,6 +1,7 @@
 package android.br.atividade.model;
 
 import android.br.atividade.model.entity.PontoTuristico;
+import android.br.atividade.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +25,7 @@ public class TurismoSingleton {
 
     private Double txAlmoco;
 
-    private String modoEnvio, nome;
+    private String modoEnvio, nome, fraseologia;
 
 
     private TurismoSingleton() {
@@ -92,5 +93,32 @@ public class TurismoSingleton {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getModoEnvio() {
+        return modoEnvio;
+    }
+
+    public String getFraseologia() {
+        fraseologia = "";
+        fraseologia = "Olá, meu nome é " + nome + " e desejo conhecer o ";
+        fraseologia += Util.listToPortuguese(toList(escolhas)).toString();
+        fraseologia += "Tenho " + nrPessoas + "acompanhante(s). ";
+        if (almoco) {
+            fraseologia += "O passeio deve incluir almoço.";
+        } else {
+            fraseologia += "O passeio não deve incluir almoço.";
+        }
+        fraseologia += "Estou ciente do total de R$" + total + " para este passeio.";
+
+        return fraseologia;
+    }
+
+    protected List<String> toList(List<PontoTuristico> lst) {
+        List<String> rets = new ArrayList<String>();
+        for (PontoTuristico p : lst) {
+            rets.add(p.getNome());
+        }
+        return rets;
     }
 }
