@@ -41,11 +41,14 @@ public class TurismoSingleton {
     }
 
     public Double getTotal() {
+
         if (almoco) {
             txAlmoco = 30d;
         } else {
             txAlmoco = 15d;
         }
+
+
         total = (txAlmoco) * new Integer(1 + nrPessoas) * (this.getEscolhas().size());
         return total;
     }

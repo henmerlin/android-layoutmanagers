@@ -11,7 +11,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -40,11 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     setUsersPreferences();
                 }
             };
-
-
-    String modo_envio, nome;
-    Integer nrAcompanhantes;
-    Boolean incluiAlmoco;
 
     /**
      * Componentes
