@@ -105,9 +105,9 @@ public class TurismoSingleton {
         fraseologia += Util.listToPortuguese(toList(escolhas)).toString();
         fraseologia += " Tenho " + nrPessoas + " acompanhante(s). ";
         if (almoco) {
-            fraseologia += "O passeio deve incluir almoço.";
+            fraseologia += "O passeio deve incluir almoço. ";
         } else {
-            fraseologia += "O passeio não deve incluir almoço.";
+            fraseologia += "O passeio não deve incluir almoço. ";
         }
         fraseologia += "Estou ciente do total de R$" + total + " para este passeio.";
 
