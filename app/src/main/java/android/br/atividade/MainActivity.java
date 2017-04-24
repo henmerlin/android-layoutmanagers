@@ -232,8 +232,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = new Intent(Intent.ACTION_SENDTO); //apenas e-mail
         intent.setData(Uri.parse("mailto:"));//apenas e-mail
         intent.putExtra(Intent.EXTRA_EMAIL, addresses);
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Resumo da Compra " + text);
-        intent.putExtra(Intent.EXTRA_TEXT, "YOUR TEXT HERE");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Resumo da Compra");
+        intent.putExtra(Intent.EXTRA_TEXT, text);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
